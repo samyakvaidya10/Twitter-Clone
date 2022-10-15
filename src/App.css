@@ -1,0 +1,11 @@
+.side-bar{
+    border: solid blue;
+    height: 100%;
+}
+.nav-bar{
+    border: solid blue;
+}
+.feed{
+    border: solid rgb(26, 255, 0);
+    height: 400px;
+}
