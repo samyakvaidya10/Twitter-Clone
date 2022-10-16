@@ -1,5 +1,8 @@
+.container{
+    margin-top: 10px;
+}
 .side-bar{
-    border: solid blue;
+    
     height: 100%;
 }
 .nav-bar{
@@ -8,4 +11,18 @@
 .feed{
     border: solid rgb(26, 255, 0);
     height: 400px;
+}
+#logo{
+    width: 32px;
+    margin-left: 10px;
+}
+.side-bar a{
+    margin: 1.5%;
+}
+#sidebar-tweet-btn{
+    display: block;
+    margin: 0 25% 25% 0;
+    font-weight: bold;
+    padding: 2.8%;
+    background-color: #00acee;
 }
