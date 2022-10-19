@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar';
+import Feed from './components/Feed/Feed';
 function App() {
   return (
     <div className="App">
@@ -13,13 +14,13 @@ function App() {
           
           <div className='col-6 layout p-0'>
                 <Navbar />
-                <h4 className='feed layout'> news feed</h4>
+                <Feed />
             
           </div>
               <div className='col d-none d-lg-block'>
-              <form class="col d-flex " role="search">
-                <input class="form-control-esm me-2 rounded-pill" type="search" placeholder="     Search Twitter" aria-label="Search" />
-                {/* <button class="btn btn-outline-success" type="submit">Search</button> */}
+              <form className="col d-flex " role="search">
+                <input className="form-control-esm me-2 rounded-pill" type="search" placeholder="     Search Twitter" aria-label="Search" />
+                {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
                 </form>
                 <br></br>
                 <h4>Whats happening</h4>
