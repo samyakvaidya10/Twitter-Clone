@@ -9,20 +9,33 @@ export default function Feed(){
     //console.log(feedData[0].picture.thumbnail)
     const [feedData,setFeedData]=React.useState(data.results);
 
- 
-   
+
+    React.useEffect(()=>{
+        async function getUser(){
+            const res=await fetch("https://randomuser.me/api/?results=10")
+            const data=await res.json()
+            setFeedData(data.results);
+        }
+        getUser();
+    },[])
     
-    
-    
-    
+    const toShowOnFeed=[]
+     
+    for(let i=0;i<feedData.length;i++){
+        toShowOnFeed.push(
+            <Tweet 
+                    key={i}
+                    profileImg={feedData[i].picture.thumbnail}
+                    firstName={feedData[i].name.first}
+                    lastName={feedData[i].name.last}
+                    location={feedData[i].location.street.number}
+                     />
+        )
+    }
+
     return(
             <>
-                <Tweet 
-                    profileImg={feedData[0].picture.thumbnail}
-                    firstName={feedData[0].name.first}
-                    lastName={feedData[0].name.last}
-                    location={feedData[0].location.street.number}
-                     />
+                {toShowOnFeed}
             </>
     )
 }
